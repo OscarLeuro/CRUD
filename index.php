@@ -9,6 +9,7 @@ session_start();
 ?>
 
 
+<hr>
 
 <div class="container">
     <div class="row mt-5">
