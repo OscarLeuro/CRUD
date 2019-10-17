@@ -70,7 +70,11 @@ if(isset($_SESSION['mensaje'])){?>
 
                 <tbody>
 
+
+                    
                     <?php
+
+                    $nueva= "opcional";
                     $sql_read = "SELECT reservaciones.Num_re, 
                     reservaciones.Num_ba, reservaciones.fecha_re, reservaciones.cuarto_re, reservaciones.id_cliente, reservaciones.pago_re, clientes.nom_cl
                     FROM reservaciones
