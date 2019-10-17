@@ -71,10 +71,11 @@ if(isset($_SESSION['mensaje'])){?>
                 <tbody>
 
                     <?php
-                    $sql_read = "SELECT reservaciones.Num_re, reservaciones.fecha_re, reservaciones.cuarto_re, reservaciones.id_cliente, reservaciones.pago_re, clientes.nom_cl
+                    $sql_read = "SELECT reservaciones.Num_re, 
+                    reservaciones.Num_ba, reservaciones.fecha_re, reservaciones.cuarto_re, reservaciones.id_cliente, reservaciones.pago_re, clientes.nom_cl
                     FROM reservaciones
                     INNER JOIN clientes
-                    on(reservaciones.id_cliente = clientes.id_cliente);";
+                    on(clientes.id_cliente = reservaciones.id_cliente);";
                     $sql_read_query = mysqli_query($conn,$sql_read);
                     while($rowc = mysqli_fetch_array($sql_read_query)){   ?>
                     
